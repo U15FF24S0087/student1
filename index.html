@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Student Pro Helper</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">Student Pro Helper</p>
+        <h1>Your Productivity Dashboard</h1>
+        <p class="subtitle">Plan, track, and finish your day like a college pro.</p>
+      </div>
+      <a class="button button-primary" href="#planner">Start Now</a>
+    </header>
+
+    <main>
+      <section class="grid-panel" id="planner">
+        <article class="card">
+          <h2>Task Planner</h2>
+          <form id="taskForm">
+            <div class="field-group">
+              <label for="taskName">Task</label>
+              <input id="taskName" type="text" placeholder="Write a task" required />
+            </div>
+            <div class="field-group">
+              <label for="taskDue">Due</label>
+              <input id="taskDue" type="date" />
+            </div>
+            <button class="button button-secondary" type="submit">Add Task</button>
+          </form>
+          <ul id="taskList" class="task-list"></ul>
+        </article>
+
+        <article class="card">
+          <h2>Study Timer</h2>
+          <div class="timer-card">
+            <p id="timerDisplay">25:00</p>
+            <div class="timer-controls">
+              <button class="button button-secondary" id="startTimer">Start</button>
+              <button class="button button-secondary" id="resetTimer">Reset</button>
+            </div>
+            <p class="note">Use the timer to stay focused in short study sessions.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <h2>GPA Calculator</h2>
+          <form id="gpaForm">
+            <div class="field-group">
+              <label for="grade1">Grade 1 (%)</label>
+              <input id="grade1" type="number" min="0" max="100" placeholder="85" required />
+            </div>
+            <div class="field-group">
+              <label for="grade2">Grade 2 (%)</label>
+              <input id="grade2" type="number" min="0" max="100" placeholder="92" />
+            </div>
+            <div class="field-group">
+              <label for="grade3">Grade 3 (%)</label>
+              <input id="grade3" type="number" min="0" max="100" placeholder="78" />
+            </div>
+            <button class="button button-secondary" type="submit">Calculate</button>
+          </form>
+          <p class="result">Estimated GPA: <strong id="gpaResult">-</strong></p>
+        </article>
+
+        <article class="card card-notes">
+          <h2>Quick Notes</h2>
+          <textarea id="notesInput" placeholder="Type meeting notes, reminders, or ideas..."></textarea>
+          <button class="button button-secondary" id="saveNotes">Save Notes</button>
+        </article>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
